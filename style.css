@@ -1,3 +1,13 @@
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-800px);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -31,9 +41,14 @@ body {
   margin-bottom: 2rem;
 }
 
+.heading-1 {
+  animation: slideInLeft 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
 .log-in-section p {
   font-size: 1.1rem;
   margin-bottom: 0.5rem;
+  animation: slideInLeft 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) .1s both;
 }
 
 .log-in-section form {
@@ -42,6 +57,7 @@ body {
   gap: 2rem;
   margin: 2rem 0;
   column-gap: 5rem;
+  animation: slideInLeft 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) .2s both;
 }
 
 .log-in-section input {
@@ -62,6 +78,18 @@ body {
   cursor: pointer;
 }
 
+@keyframes popUp {
+  0% {
+    transform: scale(.5);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
 .graphics-section {
   width: 60%;
   min-width: 700px;
@@ -78,9 +106,10 @@ body {
 
 .face-img {
   position: absolute;
-  width: 40%;
+  width: 35%;
   top: 22rem;
   left: -1.5rem;
+  animation: popUp 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both 1s;
 }
 
 .glasses-img {
@@ -88,4 +117,29 @@ body {
   width: 35%;
   right: 3rem;
   top: 3rem;
+  animation: popUp 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both 1s;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -2.3rem;
+  animation: popUp 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.footer h3 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.footer img {
+  height: 25px;
+  margin-left: 11px;
+  will-change: transform;
+  transition: transform 450ms;
+}
+
+.footer img:hover {
+  transform: scale(1.3) rotate(360deg);
 }
