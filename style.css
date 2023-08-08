@@ -1,0 +1,90 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: #F1F7ED;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.log-in-section {
+  width: 60%;
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 4rem;
+}
+
+.log-in-section h1 {
+  font-size: 4.5rem;
+  line-height: 5.5rem;
+  margin-bottom: 2rem;
+}
+
+.log-in-section p {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.log-in-section form {
+  display: grid;
+  grid-template-columns: 18rem 18rem;
+  gap: 2rem;
+  margin: 2rem 0;
+  column-gap: 5rem;
+}
+
+.log-in-section input {
+  padding: 0.8rem 0.8rem;
+  background-color: transparent;
+  border: 1px solid #ccc;
+}
+
+.log-in-section input:focus {
+  outline: 2px solid #243E36;
+}
+
+.log-in-section button {
+  padding: 0.8rem;
+  width: 100%;
+  background-color: #243E36;
+  color: white;
+  cursor: pointer;
+}
+
+.graphics-section {
+  width: 60%;
+  min-width: 700px;
+  overflow: hidden;
+  position: relative;
+}
+
+.curve-graphics {
+  position: absolute;
+  width: 75%;
+  margin-left: 8.5rem;
+  transform: rotate(-15deg);
+}
+
+.face-img {
+  position: absolute;
+  width: 40%;
+  top: 19rem;
+}
+
+.glasses-img {
+  position: absolute;
+  width: 35%;
+  right: 3rem;
+  top: 3rem;
+}
