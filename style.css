@@ -79,7 +79,8 @@ body {
 .face-img {
   position: absolute;
   width: 40%;
-  top: 19rem;
+  top: 22rem;
+  left: -1.5rem;
 }
 
 .glasses-img {
