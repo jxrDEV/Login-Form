@@ -33,6 +33,7 @@ body {
   justify-content: center;
   flex-direction: column;
   margin-left: 4rem;
+
 }
 
 .log-in-section h1 {
@@ -53,7 +54,8 @@ body {
 
 .log-in-section form {
   display: grid;
-  grid-template-columns: 18rem 18rem;
+  width: 90%;
+  grid-template-columns: 1fr 1fr;
   gap: 2rem;
   margin: 2rem 0;
   column-gap: 5rem;
