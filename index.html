@@ -8,11 +8,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
 </head>
 
 <body>
   <main class="container">
+    <nav class="logo">
+      <img src="E.png">
+    </nav>
     <section class="graphics-section">
       <div class="curve-graphics">
         <div id="animation-container"></div>
@@ -29,11 +33,23 @@
         <img class="face-img" src="face.png">
         <img class="glasses-img" src="glasses.png">
       </div>
+      <p>Embark on a Journey of Knowledge - Sign Up Today!</p>
+      <div id="animation-container-arrow"></div>
+      <script>
+        let animation2 = bodymovin.loadAnimation({
+          container: document.getElementById('animation-container-arrow'),
+          path: 'animation_ll57b31q.json',
+          render: 'svg',
+          loop: true,
+          autoplay: true,
+          name: 'demo-animation'
+        });
+      </script>
     </section>
     <section class="log-in-section">
-      <h1 class="heading-1">Form Your Learning <br>Path Today.</h1>
-      <p>This is not a real service; just learning about forms in CSS.</p>  
-      <form action="example.html" method="post">
+      <h1 class="heading-1" data-aos="fade-left">Form Your Learning <br>Path Today.</h1>
+      <p data-aos="fade-left">This is not a real service; just learning about forms in CSS.</p>  
+      <form data-aos="fade-left" action="example.html" method="post">
         <input id="firstname" required name="firstname" placeholder="First Name">
         <input id="lastname" required name="lastname" placeholder="Last Name">
         <input title="Must be a valid email address" pattern="[a-zA-Z0-9._+]+@[a-zA-Z0-9]+\.[a-z]{2,}" id="email" required name="email" placeholder="Email">
@@ -52,5 +68,9 @@
     </a>
   </div>
   <script src="script.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>

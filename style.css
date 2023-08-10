@@ -1,6 +1,6 @@
 @keyframes slideInLeft {
   from {
-    transform: translateX(-800px);
+    transform: translateX(950px);
   }
 
   to {
@@ -17,7 +17,7 @@
 body {
   width: 100%;
   height: 100vh;
-  background-color: #F1F7ED;
+  background-color: #fbfef9;
 }
 
 .container {
@@ -26,29 +26,41 @@ body {
   width: 100%;
 }
 
+.logo {
+  position: absolute;
+  top: -5.1rem;
+  left: -2.6rem;
+}
+
+.logo img {
+  width: 45%;
+}
+
 .log-in-section {
   width: 60%;
   height: 100dvh;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  margin-left: 4rem;
+  overflow: hidden;
 }
 
 .log-in-section h1 {
-  font-size: 4.5rem;
+  font-size: 4.1rem;
   line-height: 5.5rem;
   margin-bottom: 2rem;
 }
 
 .heading-1 {
   animation: slideInLeft 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  margin-left: .3rem;
 }
 
 .log-in-section p {
   font-size: 1.1rem;
   margin-bottom: 0.5rem;
   animation: slideInLeft 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) .1s both;
+  margin-left: .3rem;
 }
 
 .log-in-section form {
@@ -59,6 +71,7 @@ body {
   margin: 2rem 0;
   column-gap: 5rem;
   animation: slideInLeft 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) .2s both;
+  margin-left: .3rem;
 }
 
 .log-in-section input {
@@ -96,18 +109,20 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   overflow: hidden;
   position: relative;
   width: 40%;
   height: 100vh;
   min-width: 450px;
-  margin-right: 2rem;
+  margin-right: 5rem;
 }
 
 .curve-graphics {
   position: relative;
   width: 80%;
-  margin-left: 8.5rem;
+  margin-left: 12.5rem;
+  margin-right: 6rem;
 }
 
 #animation-container {
@@ -117,7 +132,7 @@ body {
 .face-img {
   position: absolute;
   top: 50%;
-  left: -25%;
+  left: -20%;
   width: 39%;
   animation: popUp 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both 1s;
 }
@@ -127,6 +142,16 @@ body {
   width: 39%;
   right: 3rem;
   top: 3rem;
+  animation: popUp 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both 1s;
+}
+
+.graphics-section p {
+  margin-left: 5rem;
+  animation: popUp 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both 1s;
+}
+
+#animation-container-arrow {
+  display: none;
   animation: popUp 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both 1s;
 }
 
@@ -163,22 +188,25 @@ body {
 
 @media screen and (max-width: 814px) {
   .log-in-section h1 {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
     line-height: 3rem;
+    margin-bottom: .9rem;
   }
 
   .log-in-section p {
-    font-size: .9rem;
+    font-size: .7rem;
+    margin-bottom: 0;
   }
 
   .log-in-section {
     width: 100%;
-    margin-right: 2rem;
-    margin-left: -.8rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: -7rem;
   }
 
   .log-in-section form {
-    width: 100%;
+    width: 93%;
     gap: 2rem;
     margin: 2rem 0;
     column-gap: 2.5rem;
@@ -196,7 +224,13 @@ body {
   .graphics-section {
     width: 30%;
     min-width: 360px;
-    margin-left: -2rem;
+    margin-left: 1rem;
+  }
+
+  .graphics-section p {
+    margin: 0;
+    width: 90%;
+    font-size: .7rem;
   }
 
   .curve-graphics {
@@ -215,4 +249,157 @@ body {
     right: 3rem;
     top: 2rem;
   }
+
+  .footer h3 {
+    font-size: .8rem;
+    font-weight: 500;
+  }
+
+  .footer img {
+    height: 20px;
+    margin-left: 11px;
+    will-change: transform;
+    transition: transform 450ms;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+  }
+
+  .logo {
+    position: absolute;
+    margin-left: 2px;
+    margin-top: 2px;
+    top: -4.5rem;
+    left: -2.6rem;
+  }
+
+  .graphics-section {
+    width: 100%;
+    min-width: 0px;
+    margin-left: 0rem;
+    height: 100dvh;
+  }
+
+  .curve-graphics {
+    width: 80%;
+    left: 5%;
+    margin-top: 5rem;
+  }
+
+  .face-img {
+    top: 11rem;
+    left: -2.5rem;
+    width: 30%;
+  }
+
+  .glasses-img {
+    width: 30%;
+    right: 3rem;
+    top: 2rem;
+  }
+
+  .graphics-section p {
+    text-align: center;
+    margin-top: 3rem;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+
+  #animation-container-arrow {
+    display: inline-block;
+    position: absolute;
+    width: 15%;
+    bottom: .5rem;
+  }
+
+  .log-in-section {
+    margin-left: 0;
+    margin-right: 0;
+    display: flex;
+    justify-content: start;
+    padding-right: 0;
+    padding-left: 0;
+    align-items: center;
+    animation: none;
+  }
+
+  .heading-1 {
+    animation: none;
+    margin-left: .3rem;
+  }
+
+  .log-in-section h1 {
+    font-size: 2rem;
+    line-height: 2.9rem;
+    margin-top: 6rem;
+    margin-bottom: 1.5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+
+  }
+
+  .log-in-section p {
+    font-size: .699rem;
+    margin-bottom: 3rem;
+    animation: none;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .log-in-section form {
+    display: grid;
+    width: 70%;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin: 0rem 0;
+    column-gap: 5rem;
+    animation: none;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .log-in-section input {
+    padding: 0.8rem 0.8rem;
+    background-color: transparent;
+    border: 1px solid #ccc;
+    min-width: 50%;
+  }
+
+  .log-in-section button {
+    padding: 0.8rem;
+    width: 100%;
+    background-color: #243E36;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 1.5rem;
+  }
+
+  .footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0rem;
+    animation: popUp 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  }
+
+  .footer h3 {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
+
+  .footer img {
+    height: 25px;
+    margin-left: 11px;
+    will-change: transform;
+    transition: transform 450ms;
+    margin-bottom: 1rem;
+  }
+
 }
